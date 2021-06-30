@@ -4,26 +4,26 @@
 In this portion of the project, I'll use different techniques to train and evaluate models. Using the credit card credit dataset from LendingClub, I'll oversample the data using the RandomOverSampler and SMOTE algorithms and undersample the data using the ClusterCentroids algorithm. Then, I’ll combine over- and undersampling using the SMOTEENN algorithm. Next, I'll compare two new machine learning models that reduce bias, BalancedRandomForestClassifier and EasyEnsembleClassifier, in an attempt to predict credit risk. Once completed, I'll evaluate the performance of these models and make a written recommendation on whether they should be used to predict credit risk.
 
 ## Credit Risk Results:
- - Oversampling
+### Oversampling
   -  RandomOverSampler
-    - balanced accuracy score   
-    - precision
-    - recall
+   -  balanced accuracy score   
+   -  precision
+   -  recall
   -  SMOTE
     - balanced accuracy score   
     - precision
     - recall  
- - Undersampline
+### Undersampline
   - ClusterCentroids
     - balanced accuracy score   
     - precision
     - recall- 
- - Over- and Undersampling
+### Over- and Undersampling
   - SMOTEENN
     - balanced accuracy score   
     - precision
     - recall 
- - Ensemble Classifiers
+### Ensemble Classifiers
   - BalancedRandomForestClassifier
     - balanced accuracy score   
     - precision
