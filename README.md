@@ -20,6 +20,7 @@ In this portion of the project, I'll use different techniques to train and evalu
      - precision
      - recall
 
+
 ### Undersampling
  - ClusterCentroids - 
  
@@ -27,6 +28,7 @@ In this portion of the project, I'll use different techniques to train and evalu
     - balanced accuracy score - 0.6623064259185507  
     - precision - Reliable positive classification for low risk, but unrealiable at .01 fir high risk
     - recall- low comparitively speaking (.40) for low-risk (majority class) but decent for high risk
+
 
 ### Over- and Undersampling
   
@@ -37,6 +39,7 @@ In this portion of the project, I'll use different techniques to train and evalu
     - precision very reliable for low risk, low for low risk
     - recall  - relatively high percentages for both so low risk .57 and high risk .72
 
+
 ### Ensemble Classifiers
   
   - BalancedRandomForestClassifier - 
@@ -46,10 +49,10 @@ In this portion of the project, I'll use different techniques to train and evalu
     - precision - reliable for low risk , a bit higher on high risk than others
     - recall - catorized correctly at low risk 87 and high risk .70
   
+  
   - EasyEnsembleClassifier - 
   
    ![EasyEnsembleClassifier_ConfustionMatrix](Images/EasyEnsembleClassifier_ConfustionMatrix.PNG)
-    
    - balanced accuracy score  - 0.9322447299687874
    - precision reliablilty is higher for high risk than any other .09, and still reliable for the majority class low risk at 1
    - recall - it seems that the sensitivity is very high for this with .92 high risk (far higher than others, and .94 for low risk.
