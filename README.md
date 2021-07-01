@@ -61,18 +61,19 @@ Are robust to outliers and nonlinear data.
     - precision
     - recall
     ![BalancedRandomForestClassifier_ConfustionMatrix](Images/BalancedRandomForestClassifier_ConfustionMatrix.PNG)
-    
+    - balanced accuracy score  - 0.7885466545953005 
+    - precision - reliable for low risk , a bit higher on high risk than others
+    - recall - catorized correctly at low risk 87 and high risk .70
   
   - EasyEnsembleClassifier - In boosting, however, the weak learners are not combined at the same time. Instead, they are used sequentially, as one model learns from the mistakes of the previous model.Like bagging, boosting is also a technique to combine a set of weak learners into a strong learner. We saw in bagging that the different models work independently of one another. In contrast, boosting trains a sequence of weak models. As shown below, each model learns from the errors of the previous model, and the models form an ensemble:AdaBoost, is easy to understand. In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized:
 Run efficiently on large datasets.
-    - balanced accuracy score - 0.9322447299687874
-    - precision
-    - recall 
-    ![EasyEnsembleClassifier_ConfustionMatrix](Images/EasyEnsembleClassifier_ConfustionMatrix.PNG)
+   
+   ![EasyEnsembleClassifier_ConfustionMatrix](Images/EasyEnsembleClassifier_ConfustionMatrix.PNG)
     
+   - balanced accuracy score  - 0.9322447299687874
+   - precision reliablilty is higher for high risk than any other .09, and still reliable for the majority class low risk at 1
+   - recall - it seems that the sensitivity is very high for this with .92 high risk (far higher than others, and .94 for low risk.
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models
 
 ## Credit Risk Summary: 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.There is a summary of the results (2 pt)
-lose data in undersampling and there isn't too  much data left when you use the minority data as the standard.
-There is a recommendation on which model to use, or there is no recommendation with a justification
+The results of many of the models were very similiar with slight differences in numbers.  I would recommend the EasyEnsembleClassifier because of the higher balanced accuracy score, higher precision score for the minority class, and higher sensitivity for both high and low risk.
