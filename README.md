@@ -13,12 +13,17 @@ The idea is simple and intuitive: If one class has too few instances in the trai
      -  precision - To summarize, in machine learning, precision is a measure of how reliable a positive classification is. The following formulation may help you in remembering precision: "I know that the test for cancer came back positive. How likely is it that I have cancer?
      -  recall+ - I know that I have cancer. How likely is it that the test will diagnose it?"Sensitivity is a measure of how many people who actually have cancer were correctly diagnosed.
      -  ![RandomOversampler_ConfusionMatrix](Images/RandomOversampler_ConfusionMatrix.PNG)
-     -  
+     -   Balanced Accuracy Score - 0.6663237827524566
+     -   Precision - Low Risk seems very reliable, but low risk does not
+     -   Recall - Decent likelhood of correctness at .70 and .63
  
  -  SMOTE - In SMOTE, like random oversampling, the size of the minority is increased. The key difference between the two lies in how the minority class is increased in size. As we have seen, in random oversampling, instances from the minority class are randomly selected and added to the minority class. In SMOTE, by contrast, new instances are interpolated. That is, for an instance from the minority class, a number of its closest neighbors is chosen. Based on the values of these neighbors, new values are created.It's important to note that although SMOTE reduces the risk of oversampling, it does not always outperform random oversampling. Another deficiency of SMOTE is its vulnerability to outliers. We said earlier that a minority class instance is selected, and new values are generated based on its distance from its neighbors. If the neighbors are extreme outliers, the new values will reflect this. Finally, keep in mind that sampling techniques cannot overcome the deficiencies of the original dataset!
      - balanced accuracy score - 0.6623064259185507  
      - precision and recall
      - ![SMOTE_ConfustionMatrix](Images/SMOTE_ConfustionMatrix.PNG) 
+     - balanced accuracy score - 0.6623064259185507  
+     - precision
+     - recall
 
 ### Undersampling
 Undersampling takes the opposite approach of oversampling. Instead of increasing the number of the minority class, the size of the majority class is decreased.Keep in mind that both oversampling and undersampling involve tradeoffs. Oversampling addresses class imbalance by duplicating or mimicking existing data. In contrast, undersampling only uses actual data. On the other hand, undersampling involves loss of data from the majority class. Furthermore, undersampling is practical only when there is enough data in the training set. There must be enough usable data in the undersampled majority class for a model to be useful.
@@ -28,7 +33,9 @@ Undersampling takes the opposite approach of oversampling. Instead of increasing
     - precision
     - recall- 
     - ![ClusterCentroids_ConfustionMatrix](Images/ClusterCentroids_ConfustionMatrix.PNG) 
-    - 
+    - balanced accuracy score - 0.6623064259185507  
+    - precision - Reliable positive classification for low risk, but unrealiable at .01 fir high risk
+    - recall- low comparitively speaking (.40) for low-risk (majority class) but decent for high risk
 
 ### Over- and Undersampling
   
@@ -37,7 +44,9 @@ Undersampling takes the opposite approach of oversampling. Instead of increasing
     - precision
     - recall 
     - ![SMOTEENN_ConfustionMatrix](Images/SMOTEENN_ConfustionMatrix.PNG)
-    - 
+    - balanced accuracy score - 0.6447701423556762   
+    - precision very reliable for low risk, low for low risk
+    - recall  - relatively high percentages for both so low risk .57 and high risk .72
 
 ### Ensemble Classifiers
   
@@ -65,4 +74,5 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 
 ## Credit Risk Summary: 
 Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.There is a summary of the results (2 pt)
+lose data in undersampling and there isn't too  much data left when you use the minority data as the standard.
 There is a recommendation on which model to use, or there is no recommendation with a justification
