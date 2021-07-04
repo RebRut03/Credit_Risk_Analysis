@@ -10,15 +10,15 @@ In this portion of the project, I'll use different techniques to train and evalu
      
      ![RandomOversampler_ConfusionMatrix](Images/RandomOversampler_ConfusionMatrix.PNG)
      -   Balanced Accuracy Score - 0.6663237827524566
-     -   Precision - Low Risk seems very reliable, but low risk does not
-     -   Recall - Decent likelhood of correctness at .70 and .63
+     -   Precision - The low-risk seems very reliable, but high risk does not.
+     -   Recall - There is a decent likelhood of correctness low-risk at .70 and high-risk at .63.
  
  -  SMOTE - 
      
      ![SMOTE_ConfustionMatrix](Images/SMOTE_ConfustionMatrix.PNG) 
-     - balanced accuracy score - 0.6623064259185507  
-     - precision
-     - recall
+     - Balanced Accuracy Score - 0.6623064259185507  
+     - Precision - The low-risk seems very reliable, but high risk does not.
+     - Recall - There is a decent likelhood of correctness with high-risk at .63 and low-risk at .69.
 
 
 ### Undersampling
@@ -59,5 +59,4 @@ In this portion of the project, I'll use different techniques to train and evalu
 
 
 ## Credit Risk Summary: 
-The results of many of the models were very similiar with slight differences in numbers.  I would recommend the EasyEnsembleClassifier because of the higher balanced accuracy score, higher precision score for the minority class, and higher sensitivity for both high and low risk.each model learns from the errors of the previous model, and the models form an ensemble:AdaBoost, is easy to understand. In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized:
-Run efficiently on large datasets.
+The results of many of the models were very similiar with slight differences in results.  I would recommend the EasyEnsembleClassifier because of the higher balanced accuracy score, higher precision score for the minority class, and higher sensitivity for both high and low risk.  This model learns from the errors of the previous model.  After evaluating the errors of the first model, another model is trained by weighting errors in subsequent models. This process is repeated until the error rate is minimized, and it also runs efficiently on large datasets.
